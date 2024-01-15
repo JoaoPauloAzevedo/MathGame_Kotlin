@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_Add"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#7AAD69"
+        android:text="Adição"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_Subtracao"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#ED8C98"
+        android:text="Subtração"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Multi"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#AD7BB2"
+        android:text="Multiplicação"
+        android:textSize="20sp" />
+
+</LinearLayout>
