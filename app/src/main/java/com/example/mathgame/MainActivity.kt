@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var  adicao : Button
     lateinit var subtracao : Button
     lateinit var multi : Button
+
+    var modo = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,10 +22,27 @@ class MainActivity : AppCompatActivity() {
 
         adicao.setOnClickListener {
 
+            modo = 0
             val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("modo", modo)
             startActivity(intent)
-
         }
+        subtracao.setOnClickListener {
+
+            modo = 1
+            val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("modo", modo)
+            startActivity(intent)
+        }
+
+        multi.setOnClickListener {
+
+            modo = 2
+            val intent = Intent(this@MainActivity, GameActivity::class.java)
+            intent.putExtra("modo", modo)
+            startActivity(intent)
+        }
+
 
     }
 }
